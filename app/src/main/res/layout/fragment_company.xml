@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="44dp"
+        android:paddingBottom="28dp">
+
+        <!-- ========== LOGO ========== -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="Logo CONMERSA"
+            android:scaleType="fitCenter"
+            android:src="@drawable/conmersa_logo" />
+
+        <!-- ========== BLOQUE 1: EMPRESA ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <!-- Texto empresa -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/tvEmpresaTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CONMERSA®"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvEmpresaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#222222"
+                    android:text="🇲🇽 Empresa mexicana con +23 años de experiencia. Nos especializamos en soluciones de empaque y embalaje para que tú puedas enfocarte en tu negocio." />
+
+                <TextView
+                    android:id="@+id/tvEmpresaBullets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="4dp"
+                    android:textColor="#222222"
+                    android:text="• Etiquetamos productos\n• Armamos promociones\n• Reempacamos mercancía\n• Plásticos termoencogibles\n• Manejo de líneas operativas" />
+
+            </LinearLayout>
+
+            <!-- MINIATURA VIDEO EMPRESA - MÁS GRANDE -->
+            <FrameLayout
+                android:id="@+id/boxEmpresaThumb"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_gravity="top"
+                android:background="@drawable/rounded_video_thumb"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/imgEmpresaThumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_video_empresa"
+                    android:contentDescription="Miniatura video empresa" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_circle"
+                    android:contentDescription="Play" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Separación -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <!-- ========== BLOQUE 2: SITE ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Texto site -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingEnd="20dp">
+
+                <TextView
+                    android:id="@+id/tvSiteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Parque Industrial Las Palmas"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tvSiteSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Site Santa Catarina, N.L."
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#6E56CF" />
+
+                <TextView
+                    android:id="@+id/tvSiteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#222222"
+                    android:text="📍 Palmas No. 130, Parque Industrial Las Palmas\nSanta Catarina, N.L., C.P. 66367\n\nOperaciones de empaque, etiquetado y armado de promociones con altos estándares de calidad." />
+
+            </LinearLayout>
+
+            <!-- MINIATURA VIDEO SITE - MÁS GRANDE -->
+            <FrameLayout
+                android:id="@+id/boxSiteThumb"
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_gravity="top"
+                android:background="@drawable/rounded_video_thumb"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <ImageView
+                    android:id="@+id/imgSiteThumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/thumb_video_site"
+                    android:contentDescription="Miniatura video site" />
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_circle"
+                    android:contentDescription="Play" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- ========== FOTO DEL SITE ========== -->
+        <TextView
+            android:id="@+id/tvSitePhotoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Nuestras instalaciones"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/imgSitePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foto_site_santa_catarina"
+            android:contentDescription="Foto del site Santa Catarina"
+            android:background="#F0F0F0" />
+
+        <TextView
+            android:id="@+id/tvSitePhotoHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Vista del Parque Industrial Las Palmas, Santa Catarina"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:textStyle="italic" />
+
+        <!-- ========== FILOSOFÍA ========== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/tvPhilosophyTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuestra filosofía"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:background="#F8F8F8"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨ La diversidad nos hace más fuertes (somos inclusivos)"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🤝 El respeto laboral es la base de todo"
+                android:textSize="15sp"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡ El trabajo en equipo lo hace posible"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <!-- ========== LEMA ========== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="\Tu éxito descansa en nuestras manos"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#6E56CF"
+        android:gravity="center" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
